@@ -14,8 +14,8 @@
     "d3": "^7.9.0",
     "dagre-d3": "^0.6.4"
   },
+  "description": "",
   "devDependencies": {
     "electron": "^34.0.1"
-  },
-  "description": ""
+  }
 }
