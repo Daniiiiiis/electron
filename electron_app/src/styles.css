@@ -1,0 +1,123 @@
+/* Общие стили страницы */
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: #78B24B;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+#app {
+    display: flex;
+    flex-direction: row;
+    height: calc(100vh - 80px);
+}
+
+#leftPanel {
+    width: 400px;
+    overflow: auto;
+    border-right: 2px solid #ccc;
+}
+
+#rightPanel {
+    flex: 1;
+    overflow: auto;
+    padding: 10px;
+}
+
+#orgContainer {
+    position: relative;
+    min-width: 800px;
+    min-height: 600px;
+}
+
+/* Узлы графа */
+.depNode rect {
+    fill: #78B24B; /* Зеленый фон */
+    stroke: #4A7023; /* Темная рамка */
+    stroke-width: 2px;
+    rx: 5; /* Скругление углов */
+    ry: 5;
+}
+
+/* Текст внутри узлов */
+.depNode text {
+    font-size: 12px;
+    fill: #FFFFFF; /* Белый цвет текста */
+    font-weight: bold;
+    text-anchor: middle;
+    dominant-baseline: middle; /* Вертикальное центрирование текста */
+}
+
+/* Ребра графа (стрелки) */
+.edgePath path {
+    stroke: #4A7023; /* Темно-зеленый цвет стрелки */
+    stroke-width: 2px;
+    fill: none;
+}
+
+.edgePath marker path {
+    fill: #4A7023; /* Цвет стрелки (наконечника) */
+}
+
+/* Выделенные узлы */
+.depNode.highlighted rect {
+    fill: #FFD700; /* Золотой фон для выделенных узлов */
+}
+
+/* Линии leader-line будут рисоваться поверх */
+#orgContainer {
+    position: relative;
+    min-width: 800px;
+    min-height: 600px;
+}
+
+/* Список сотрудников */
+.employeeRow {
+    border: 1px solid #ccc;
+    margin: 5px 0;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.fired30 {
+    background-color: gray;
+    opacity: 0.6;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Модальное окно */
+#modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 40px;
+}
+
+#modalCard {
+    background-color: #fff;
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+}

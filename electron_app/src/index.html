@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Управление персоналом</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <img src="icon.png" alt="Логотип" class="logo">
+    <h1>Организационная структура</h1>
+</header>
+
+<div id="app">
+    <div id="leftPanel">
+        <h2>Структура</h2>
+        <!-- Контейнер с прокруткой -->
+        <div id="svgContainer">
+            <svg id="svgOrg"></svg>
+        </div>
+    </div>
+    <div id="rightPanel">
+        <h2>Сотрудники</h2>
+        <div id="employeesList"></div>
+    </div>
+</div>
+
+<!-- Модальное окно для карточки -->
+<div id="modalOverlay" class="hidden">
+    <div id="modalCard">
+        <button id="closeModal">Закрыть</button>
+        <div id="cardContent"></div>
+    </div>
+</div>
+
+<!-- Библиотеки -->
+<script src="./libs/d3.min.js"></script>
+<script src="./libs/dagre-d3.min.js"></script>
+<script src="./libs/axios.min.js"></script>
+
+<!-- Наш код -->
+<script type="module" src="renderer.js"></script>
+</body>
+</html>
